@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sorting Algorithms README</title>
-</head>
-<body>
 
 <h1>Sorting Algorithms README</h1>
 
@@ -69,6 +61,3 @@
 </ul>
 
 <p>Merge Sort's performance makes it a popular choice for sorting large datasets efficiently.</p>
-
-</body>
-</html>

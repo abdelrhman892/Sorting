@@ -1,7 +1,7 @@
 
 <h1>Sorting Algorithms README</h1>
 
-<p>This README provides an overview and explanation of three common sorting algorithms: Bubble Sort, Selection Sort, and Merge Sort.</p>
+<p>This README provides an overview and explanation of three common sorting algorithms.</p>
 
 <h2>Bubble Sort</h2>
 

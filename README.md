@@ -7,7 +7,7 @@
 
 <p>Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. Bubble Sort is named for the way smaller elements "bubble" to the top of the list with each iteration.</p>
 
-<h3>Algorithm:</h3>
+<h4>Algorithm:</h4>
 
 <ol>
   <li>Start at the beginning of the list.</li>
@@ -16,7 +16,7 @@
   <li>Continue iterating through the list until no more swaps are needed.</li>
 </ol>
 
-<h3>Time Complexity:</h3>
+<h4>Time Complexity:</h4>
 <ul>
   <li>Best Case: O(n) - when the list is already sorted.</li>
   <li>Average Case: O(n^2)</li>
@@ -27,7 +27,7 @@
 
 <p>Selection Sort is an in-place comparison sorting algorithm. It divides the input list into two parts: the sublist of items already sorted and the sublist of items remaining to be sorted. It repeatedly finds the smallest element from the unsorted sublist and moves it to the beginning of the sorted sublist.</p>
 
-<h3>Algorithm:</h3>
+<h4>Algorithm:</h4>
 
 <ol>
   <li>Find the smallest element in the unsorted portion of the list.</li>
@@ -35,7 +35,7 @@
   <li>Move the sublist boundaries one element to the right.</li>
 </ol>
 
-<h3>Time Complexity:</h3>
+<h4>Time Complexity:</h4>
 <ul>
   <li>Best Case: O(n^2)</li>
   <li>Average Case: O(n^2)</li>
@@ -46,14 +46,14 @@
 
 <p>Merge Sort is a divide and conquer algorithm. It recursively divides the input list into two halves, sorts them independently, and then merges them back together. It is notable for its stability and predictable performance.</p>
 
-<h3>Algorithm:</h3>
+<h4>Algorithm:</h4>
 
 <ol>
   <li>Divide the unsorted list into n sublists, each containing one element.</li>
   <li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining.</li>
 </ol>
 
-<h3>Time Complexity:</h3>
+<h4>Time Complexity:</h4>
 <ul>
   <li>Best Case: O(n log n)</li>
   <li>Average Case: O(n log n)</li>

@@ -1,7 +1,7 @@
 package org.example;
 
 public class Main {
-    public static void SelectionSort(int[] arr){ //time complexity = o(n^2)
+    public static void SelectionSort(int[] arr){
         for (int i = 0; i < arr.length; i++){
             for (int j = i+1; j < arr.length; j++){
                 if (arr[j] < arr[i]){
@@ -14,7 +14,7 @@ public class Main {
         }
     }
 
-    public static void bubbleSort(int[] arr){// worst case {o(n^2)}, best case {o(n)}
+    public static void bubbleSort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++){
             for (int j = 0; j < arr.length - 1 - i; j++){
                 if (arr[j] > arr[j + 1]){
@@ -26,7 +26,7 @@ public class Main {
         }
     }
 
-    private static void mergeSort(int[] arr) { // Worst case {O(n Log n)}, {Best case O(n)}
+    private static void mergeSort(int[] arr) {
         int length = arr.length;
         if (arr.length <= 1) return;
 
@@ -83,6 +83,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-
+        int[] nums = {9, 8, 7, 6, 5, 4, 3, 2, 1};
     }
 }

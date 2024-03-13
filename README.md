@@ -1,5 +1,5 @@
 
-<h1>Sorting Algorithms README</h1>
+<h1>Sorting Algorithms</h1>
 
 <p>This README provides an overview and explanation of three common sorting algorithms.</p>
 

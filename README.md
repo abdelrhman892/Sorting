@@ -55,9 +55,9 @@
 
 <h4>Time Complexity:</h4>
 <ul>
-  <li>Best Case: O(n) - when the list is already sorted.</li>
+  <li>Best Case: O(n)</li>
   <li>Average Case: O(n^2)</li>
-  <li>Worst Case: O(n^2) - when the list is sorted in reverse order.</li>
+  <li>Worst Case: O(n^2)</li>
 </ul>
 
 <h2>Merge Sort</h2>

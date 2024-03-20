@@ -42,6 +42,24 @@
   <li>Worst Case: O(n^2)</li>
 </ul>
 
+<h2>Insertion Sort</h2>
+
+<p>Insertion Sort is a simple sorting algorithm that builds the final sorted list one item at a time. It iterates over each element in the list, removing it from the unsorted portion and inserting it into the correct position in the sorted portion.</p>
+
+<h4>Algorithm:</h4>
+
+<ol>
+  <li>Start from the second element (index 1) and iterate through the list.</li>
+  <li>For each element, compare it with the elements to its left and move it to the correct position.</li>
+</ol>
+
+<h4>Time Complexity:</h4>
+<ul>
+  <li>Best Case: O(n) - when the list is already sorted.</li>
+  <li>Average Case: O(n^2)</li>
+  <li>Worst Case: O(n^2) - when the list is sorted in reverse order.</li>
+</ul>
+
 <h2>Merge Sort</h2>
 
 <p>Merge Sort is a divide and conquer algorithm. It recursively divides the input list into two halves, sorts them independently, and then merges them back together. It is notable for its stability and predictable performance.</p>

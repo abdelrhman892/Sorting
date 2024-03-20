@@ -1,7 +1,7 @@
 package org.example;
 
 public class Main {
-    public static void SelectionSort(int[] arr){
+    public static void selectionSort(int[] arr){
         for (int i = 0; i < arr.length; i++){
             for (int j = i+1; j < arr.length; j++){
                 if (arr[j] < arr[i]){
@@ -23,6 +23,18 @@ public class Main {
                     arr[j + 1] = temp;
                 }
             }
+        }
+    }
+
+    public static void insertionSort(int[] arr){
+        for (int i = 1; i < arr.length; i++){
+            int temp = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > temp){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
         }
     }
 
@@ -83,6 +95,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        int[] nums = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int[] nums = {9, 1, 8, 2, 7, 3, 6, 5, 4};
+        selectionSort(nums);
+        for (int num : nums){
+            System.out.print(num + " ");
+        }
     }
 }

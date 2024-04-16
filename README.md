@@ -79,3 +79,25 @@
 </ul>
 
 <p>Merge Sort's performance makes it a popular choice for sorting large datasets efficiently.</p>
+
+<h2>Quick Sort</h2>
+
+<p>Quick Sort is another efficient, comparison-based sorting algorithm that follows the divide-and-conquer principle. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays according to whether they are less than or greater than the pivot. The sub-arrays are then recursively sorted.</p>
+
+<h4>Algorithm:</h4>
+
+<ol>
+  <li>Choose a 'pivot' element from the array.</li>
+  <li>Partition the array into two sub-arrays: elements less than the pivot and elements greater than the pivot.</li>
+  <li>Recursively apply the above steps to the sub-arrays.</li>
+</ol>
+
+<h4>Time Complexity:</h4>
+<ul>
+  <li>Best Case: O(n log n)</li>
+  <li>Average Case: O(n log n)</li>
+  <li>Worst Case: O(n^2) - can occur if the pivot selection is unbalanced, leading to one sub-array significantly larger than the other.</li>
+</ul>
+
+<p>Quick Sort is often faster in practice compared to other O(n log n) algorithms like Merge Sort, particularly for small arrays or arrays with a small range of values.</p>
+

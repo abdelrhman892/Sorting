@@ -2,54 +2,41 @@ package org.example;
 
 public class Main {
 
-    private static void selectionSort(int[] arr){
-        for (int i = 0; i < arr.length; i++){
-            for (int j = i+1; j < arr.length; j++){
-                if (arr[j] < arr[i]){
-                    int min = arr[j];
-                    int temp = arr[i];
-                    arr[i] = min;
-                    arr[j] = temp;
-                }
-            }
-        }
+        private static void quickSort(int[] arr, int start, int end) {
+        if (end <= start) return;
+        int pivot = partition(arr, start, end);
+        quickSort(arr, start, pivot - 1); // for the part that becomes before pivot
+        quickSort(arr, pivot + 1, end);  // for the part that becomes after pivot
     }
-
-    private static void bubbleSort(int[] arr){
-        for (int i = 0; i < arr.length - 1; i++){
-            for (int j = 0; j < arr.length - 1 - i; j++){
-                if (arr[j] > arr[j + 1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j + 1] = temp;
-                }
+    private static int partition(int[] arr, int start, int end) {
+        int pivot = arr[end];
+        int i = start - 1;
+        for (int j = start; j < end ; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
-    }
-
-    private static void insertionSort(int[] arr){
-        for (int i = 1; i < arr.length; i++){
-            int temp = arr[i];
-            int j = i - 1;
-            while (j >= 0 && arr[j] > temp){
-                arr[j + 1] = arr[j];
-                j--;
-            }
-            arr[j + 1] = temp;
-        }
+        i++;
+        int temp = arr[i];
+        arr[i] = arr[end];
+        arr[end] = temp;
+        return i;
     }
 
     private static void mergeSort(int[] arr) {
         int length = arr.length;
-        if (arr.length <= 1) return;
+
+        if (length <= 1) return;
 
         int middle = length / 2;
         int[] leftArr = new int[middle];
         int[] rightArr = new int[length - middle];
-
         int i = 0, j = 0;
 
-        for (;i < length; i++){
+        for(; i< length; i++){
             if (i < middle){
                 leftArr[i] = arr[i];
             }
@@ -63,64 +50,71 @@ public class Main {
         mergeSort(rightArr);
         merge(leftArr, rightArr, arr);
     }
-
-    private static void merge(int[] leftArr, int[] rightArr, int[] arr) {
-        int leftSize = arr.length / 2;
+    private static void merge(int[]leftArr, int[]rightArr, int[] arr) {
+        int leftSize = arr.length/2;
         int rightSize = arr.length - leftSize;
+        int i = 0, L = 0, R = 0;
 
-        int i = 0, l = 0, r = 0;
-
-        while (l < leftSize && r < rightSize){
-            if (leftArr[l] < rightArr[r]){
-                arr[i] = leftArr[l];
+        while (L < leftSize && R < rightSize){
+            if (leftArr[L] < rightArr[R]){
+                arr[i] = leftArr[L];
                 i++;
-                l++;
-            } else {
-                arr[i] = rightArr[r];
+                L++;
+            }
+            else {
+                arr[i] = rightArr[R];
                 i++;
-                r++;
+                R++;
             }
         }
-
-        while (l < leftSize){
-            arr[i] = leftArr[l];
+        while (L < leftSize){
+            arr[i] = leftArr[L];
             i++;
-            l++;
+            L++;
         }
-        while (r < rightSize){
-            arr[i] = rightArr[r];
+        while (R < rightSize){
+            arr[i] = rightArr[R];
             i++;
-            r++;
+            R++;
         }
     }
 
-    private static void quickSort(int[] array, int start, int end) {
-        if (end <= start) return;
-
-        int pivot = partition(array, start, end);
-        quickSort(array, start, pivot - 1);
-        quickSort(array, pivot + 1, end);
+    public static void insertionSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++){
+            int temp = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > temp){
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
+        }
     }
 
-    private static int partition(int[] array, int start, int end) {
-        int pivot =  array[end];
-        int i = start - 1;
-        for (int j = start; j < end; j++){
-            if (array[j] < pivot){
-                i++;
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+    public static void selectionSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+
+        }
+    }
+
+    public static void bubbleSort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
             }
         }
-        i++;
-        int temp = array[i];
-        array[i] = array[end];
-        array[end] = temp;
-
-        return i;
     }
-
 
     public static void main(String[] args) {
         int[] array = {8, 2, 5, 3, 9, 4, 7, 6, 1};
